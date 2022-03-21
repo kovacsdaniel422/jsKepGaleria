@@ -34,11 +34,11 @@ var kepeim = [{
 var kepindex = 0;
 function galeria(){
     if (kepindex == 0){
-        var txt ="<div class='galeria' id='elsokep'><img src='"+kepeim[4].eleres+"' alt='"+kepeim[4].leírás+"' onclick='kepcsere()'></div><div class='galeria' id='masodikkep'><img src='"+kepeim[kepindex].eleres+"' alt='"+kepeim[kepindex].leírás+"' onclick='kepcsere()'></div><div class='galeria' id='elsokep'><img src='"+kepeim[kepindex+1].eleres+"'' alt='"+kepeim[kepindex+1].leírás+"' onclick='kepcsere()'></div>";
+        var txt ="<div class='galeria' id='elsokep'><img src='"+kepeim[4].eleres+"' alt='"+kepeim[4].leírás+"' id='kivalasztott' onclick='elsokepClick()'></div><div class='galeria' id='masodikkep'><img src='"+kepeim[kepindex].eleres+"' alt='"+kepeim[kepindex].leírás+"' id='kivalasztott'></div><div class='galeria' id='harmadikkep'><img src='"+kepeim[kepindex+1].eleres+"'' alt='"+kepeim[kepindex+1].leírás+"' id='kivalasztott' onclick='harkepClick()'></div>";
     }else if (kepindex == 4){
-    var txt ="<div class='galeria'><img src='"+kepeim[kepindex-1].eleres+"' alt='"+kepeim[kepindex-1].leírás+"' onclick='kepcsere()'></div><div class='galeria'><img src='"+kepeim[kepindex].eleres+"' alt='"+kepeim[kepindex].leírás+"' onclick='kepcsere()'></div><div class='galeria'><img src='"+kepeim[0].eleres+"'' alt='"+kepeim[0].leírás+"' onclick='kepcsere()'></div>";
+    var txt ="<div class='galeria'  id='elsokep'><img src='"+kepeim[kepindex-1].eleres+"' alt='"+kepeim[kepindex-1].leírás+"' id='kivalasztott' onclick='elsokepClick()'></div><div class='galeria' id='masodikkep'><img src='"+kepeim[kepindex].eleres+"' alt='"+kepeim[kepindex].leírás+"' '></div><div class='galeria' id='harmadikkep'><img src='"+kepeim[0].eleres+"'' alt='"+kepeim[0].leírás+"' id='kivalasztott' onclick='harkepClick()'></div>";
     }else{
-        var txt ="<div class='galeria'><img src='"+kepeim[kepindex-1].eleres+"' alt='"+kepeim[kepindex-1].leírás+"' onclick='kepcsere()'></div><div class='galeria'><img src='"+kepeim[kepindex].eleres+"' alt='"+kepeim[kepindex].leírás+"' onclick='kepcsere()'></div><div class='galeria'><img src='"+kepeim[kepindex+1].eleres+"'' alt='"+kepeim[kepindex+1].leírás+"' onclick='kepcsere()'></div>";
+        var txt ="<div class='galeria' id='elsokep'><img src='"+kepeim[kepindex-1].eleres+"' alt='"+kepeim[kepindex-1].leírás+"' '></div><div class='galeria' id='masodikkep'><img src='"+kepeim[kepindex].eleres+"' alt='"+kepeim[kepindex].leírás+"' id='kivalasztott' onclick='elsokepClick()'></div><div class='galeria' id='harmadikkep'><img src='"+kepeim[kepindex+1].eleres+"'' alt='"+kepeim[kepindex+1].leírás+"' id='kivalasztott' onclick='harkepClick()'></div>";
     }
     ID("inp").innerHTML=txt;
 }
@@ -71,7 +71,14 @@ function jobbra() {
     console.log(kepindex);
     megjelenit(kepindex)
 }
-function kepcsere(){
-    var valami = event.target.src
-    console.log(valami)
+
+function elsokepClick(){
+    let text = document.getElementById("elsokep").textContent;
+    document.getElementById("valtoz").innerHTML = text;
+    console.log(text)
+}
+function harkepClick(){
+    let text = document.getElementById("harmadikkep").textContent;
+    document.getElementById("valtoz").innerHTML = text;
+    console.log(text)
 }
