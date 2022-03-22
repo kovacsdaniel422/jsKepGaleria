@@ -6,10 +6,11 @@ button{
     height: 100%;
 }
 
-main, footer{
+main{
     border: 1px solid black;
     margin: auto;
     max-width: 1000px;
+    background-color: white;
 }
 article img{
     width: 100%;

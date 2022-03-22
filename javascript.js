@@ -7,26 +7,26 @@ function ID(elem) {
 }
 
 var kepeim = [{
-    eleres: "kepek/_DSC7025.jpg",
+    eleres: "kepek/kep01.jpg",
     cim: "Állatok",
     leírás: "Kecskék",},
     {
-    eleres: "kepek/_DSC7365.jpg",
+    eleres: "kepek/kep02.jpg",
     cim: "Japán fa",
     leírás: "Szép sétány"
     },
     {
-    eleres: "kepek/_DSC7371_1.jpg",
+    eleres: "kepek/kep03.jpg",
     cim: "Sárga virágok",
     leírás: "Szép mezőföld"
     },
     {
-    eleres: "kepek/_DSC7444.jpg",
+    eleres: "kepek/kep04.jpg",
     cim: "Tájkép",
     leírás: "Fent a magasban!"
     },
     {
-    eleres: "kepek/_DSC7515.jpg",
+    eleres: "kepek/kep05.jpg",
     cim: "Az út mellet",
     leírás: "Szép fehér virágok az út mellet"
     }]
@@ -73,12 +73,12 @@ function jobbra() {
 }
 
 function elsokepClick(){
-    let text = document.getElementById("elsokep").textContent;
+    let text = document.getElementById("elsokep").innerHTML;
     document.getElementById("valtoz").innerHTML = text;
     console.log(text)
 }
 function harkepClick(){
-    let text = document.getElementById("harmadikkep").textContent;
+    let text = document.getElementById("harmadikkep").innerHTML;
     document.getElementById("valtoz").innerHTML = text;
     console.log(text)
 }
